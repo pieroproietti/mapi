@@ -1,0 +1,14 @@
+#!/bin/bash 
+source bin/program
+cd ~/${PROGRAM}
+
+# Create virtual environment
+python3 -m venv venv_${PROGRAM}
+
+# Install dependencies
+source venv_${PROGRAM}/bin/activate
+
+# install packages
+pip install openapi-core
+pip install datamodel-code-generator
+deactivate
